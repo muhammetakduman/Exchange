@@ -3,8 +3,8 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import '../css/currency.css';
 import axios from 'axios';
 
-let BASE_URL = "https://api.freecurrencyapi.com/v1/latest";
-let API_KEY = "fca_live_p2ESAtn7dggMt9sQoG8qiIATgr273ZrJ4aT8nRLw";
+let BASE_URL = import.meta.env.VITE_BASE_URL;
+let API_KEY = import.meta.env.VITE_API_KEY;
 
 
 function Currency() {
@@ -51,7 +51,9 @@ function Currency() {
           <option >EUR</option>
           <option >USD</option>
         </select>
-        <input value={result} type="number" className='result'
+        <input value={result} type="nu
+        
+        mber" className='result'
           onChange={(e) => setResult(e.target.value)} />
 
       </div>
